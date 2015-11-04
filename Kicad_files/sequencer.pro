@@ -1,4 +1,4 @@
-update=Thu 29 Oct 2015 05:38:26 PM UTC
+update=Tuesday, November 03, 2015 'pmt' 01:43:35 pm
 version=1
 last_client=eeschema
 [cvpcb]
@@ -47,12 +47,7 @@ LibName16=valves
 version=1
 [eeschema]
 version=1
-LibDir=../kicad libraries;../../../kicad-library
-NetFmtName=
-RptD_X=0
-RptD_Y=100
-RptLab=1
-LabSize=60
+LibDir=../../../kicad-library
 [eeschema/libraries]
 LibName1=SparkFun
 LibName2=/home/adado/Dropbox/Work/kicad libraries/display_lcd
