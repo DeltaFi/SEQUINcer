@@ -1,17 +1,13 @@
-#avr-gcc -Wall -Os -DF_CPU=8000000 -mmcu=attiny4313 -c main.c -o main.hex
-#sudo avrdude -v -p attiny4313 -c avrispmkII -U flash:w:main.hex:i
-#
-# Makefile template for ATtiny45
+# Makefile template for ATtiny4313
 # Derived from AVR Crosspack template
-#
 
-DEVICE     = attiny4313           # See avr-help for all possible devices
-CLOCK      = 8000000            # 1Mhz
-PROGRAMMER = -c avrispmkII      # For using Adafruit USBtiny
+DEVICE     = attiny4313         # See avr-help for all possible devices
+CLOCK      = 8000000            # 8Mhz
+PROGRAMMER = -c avrispmkII      # See avrdude list of programmers
 OBJECTS    = main.o             # Add more objects for each .c file here
-FUSES      = -U lfuse:w:0x64:m -U hfuse:w:0xdf:m -U efuse:w:0xff:m  # settings as taken from http://www.engbedded.com/fusecalc/
+FUSES      = -U lfuse:w:0x64:m -U hfuse:w:0xdf:m -U efuse:w:0xff:m  # settings obtained using http://www.engbedded.com/fusecalc/
 
-AVRDUDE = sudo avrdude $(PROGRAMMER) -p $(DEVICE)
+AVRDUDE = avrdude $(PROGRAMMER) -p $(DEVICE)
 COMPILE = avr-gcc -Wall -Os -DF_CPU=$(CLOCK) -mmcu=$(DEVICE)
 
 # symbolic targets:
