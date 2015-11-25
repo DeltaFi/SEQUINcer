@@ -1,4 +1,4 @@
-update=Tuesday, November 03, 2015 'pmt' 01:43:35 pm
+update=Tue 24 Nov 2015 01:55:55 PM UTC
 version=1
 last_client=eeschema
 [cvpcb]
@@ -47,7 +47,12 @@ LibName16=valves
 version=1
 [eeschema]
 version=1
-LibDir=../../../kicad-library
+LibDir=../kicad libraries;../../../kicad-library
+NetFmtName=
+RptD_X=0
+RptD_Y=100
+RptLab=1
+LabSize=60
 [eeschema/libraries]
 LibName1=SparkFun
 LibName2=/home/adado/Dropbox/Work/kicad libraries/display_lcd
@@ -130,3 +135,5 @@ LibName78=library/video
 LibName79=library/Xicor
 LibName80=library/xilinx
 LibName81=library/Zilog
+LibName82=switch-enc
+LibName83=w_device
