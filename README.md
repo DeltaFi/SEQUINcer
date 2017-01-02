@@ -1,1 +1,1 @@
-# sequin-sir-sequencer
+# Sequencer Module
