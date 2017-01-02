@@ -4,8 +4,8 @@
 DEVICE     = atmega1284         # See avr-help for all possible devices
 CLOCK      = 16000000           # 16Mhz
 PROGRAMMER = -c avrispmkII      # See avrdude list of programmers
-OBJECTS    = main.o             # Add more objects for each .c file here
-FUSES      = -U lfuse:w:0x64:m -U hfuse:w:0xdf:m -U efuse:w:0xff:m  # settings obtained using http://www.engbedded.com/fusecalc/
+OBJECTS    = main.o hd44780.o   # Add more objects for each .c file here
+#FUSES      = -U lfuse:w:0x64:m -U hfuse:w:0xdf:m -U efuse:w:0xff:m  # settings obtained using http://www.engbedded.com/fusecalc/
 
 AVRDUDE = avrdude $(PROGRAMMER) -p $(DEVICE)
 COMPILE = avr-gcc -Wall -Os -DF_CPU=$(CLOCK) -mmcu=$(DEVICE)
